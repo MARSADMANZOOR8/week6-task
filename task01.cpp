@@ -1,32 +1,52 @@
-# include <iostream>
-using namespace std ;
-char  marks(int numbers); 
+#include <iostream>
+using namespace std;
+string  activity(string temperature,string humidity);
 main()
-{ 
-    int numbers ;
-    cout << " enter your numbers " << endl;
-    cin >> numbers ;
-    char grade ;
-    grade = marks (numbers);
-    cout << grade ;
-char  marks(int numbers)
-  char grad;
-  if (numbers < 50)
 {
-    grad = 'f'; 
-   
+string temperature;
+cout << " enter the temperature : " << endl;
+cin >> temperature;
+string humidity;
+cout << "enter the humidity : " << endl;
+cin >> humidity;
+string result;
+result =  activity(temperature,humidity);
+cout << " we should play " << result << endl;
 }
- 
- if (numbers => 50 && numbers <60 )
+string  activity(string temperature,string humidity)
 {
-    grad = 'e'; 
-   
-} 
-if (numbers =>  60 && number <70 )
-{
-    grad = 'd'; 
-   
+    string print;
+  if (temperature=="warm")
+  {
+    if (humidity=="dry")
+    {
+        print = "play_tennis";
+     return print;
+    }
+  }
+  if (temperature=="warm")
+  {
+    if (humidity=="humid")
+    {
+        print = "swim";
+     return print ;
+    }
+  }
+   if (temperature=="cold")
+  {
+    if (humidity=="dry")
+    {
+        print = "basketball";
+     return print;
+    }
+  }
+   if (temperature=="warm")
+  {
+    
+    if (humidity=="humid")
+    {
+        print = "watch_tv";
+     return print ;
+    }
+  }
 }
-return grad;
-
-} 
